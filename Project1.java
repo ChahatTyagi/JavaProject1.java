@@ -1,23 +1,15 @@
 #JavaProject1.java
-
 import java.util.*;
 class nogame
 {
-    static void main( int t)
+    static void main( )
     {   
         Scanner sc=new Scanner(System.in);
-        /*int m=100;int s=0;
-        int n=1;int a=0;
-        int r=m-n+1;*/
+        System.out.println("enter the no. of attempts the user has to guess the number");
+        int t=sc.nextInt();
         Random random=new Random();
         int a= random.nextInt(100)+1;
-        //System.out.println("random no:"+a);
-        /*for(int i=0;i<=100;i++)
-        {
-          if(a<=i)
-          System.out.println("random no:"+a);
-        }*/
-        int b=a;int f=0,g=0,h=0;
+        int b=a;int f=0,g=0,h=0,count=0,won=0;
          for(int j=1;j<=t;j++)
          {
              System.out.println("enter the guessed no");
@@ -27,6 +19,8 @@ class nogame
            {
              System.out.println("guessed no is correct");
              f++;
+             count++;
+             won++;
             }
           else if(s%2>a)
           {
@@ -44,6 +38,16 @@ class nogame
           s=0;
          }
          System.out.println("random no:"+a);
+         if(count==0)
+         {
+             System.out.println("user was not able to guess in "+t+" chances");
+         }
+         System.out.println("User's Score:");
+         System.out.println("No. of attempts taken by the user:"+t);
+         System.out.println("No. of rounds won by the user:"+won);
         }
         
-    }
+    }#JavaProject1.java
+
+        
+         
